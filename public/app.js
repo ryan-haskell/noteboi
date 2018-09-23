@@ -26,7 +26,8 @@ const setClasses = el => [ ...el.children ].map(setClass)
 const elements = {
   title: document.getElementById('title'),
   caption: document.getElementById('caption'),
-  date: document.getElementById('date')
+  date: document.getElementById('date'),
+  editor: document.getElementById('editor')
 }
 
 const syncWithLocalStorage = el => {
@@ -53,5 +54,5 @@ const initializeServiceWorker = () => {
   }
 }
 
-initializeEditor(document.getElementById('editor'))
+initializeEditor(elements.editor)
 initializeServiceWorker()
