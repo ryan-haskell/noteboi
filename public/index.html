@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>minimo</title>
+  <meta name="description" content="A free, minimalist markdown editor.">
+  <link rel="icon" href="/icons/32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i">
+  <link rel="stylesheet" href="/style.css">
+  <!-- PWA Stuff -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+  <div class="container">
+    <header><h1>minimo.</h1></header>
+    <input id="title" class="title" type="text" placeholder="Title" aria-label="Title" />
+    <p id="caption" class="caption" style="display: none">Created on <span id="date"></span></p>
+    <div class="editor" id="editor"></div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

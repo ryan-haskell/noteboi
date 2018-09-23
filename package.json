@@ -1,0 +1,27 @@
+{
+  "name": "minimo",
+  "version": "1.0.0",
+  "description": "a free, minimal markdown notes app",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryannhg/minimo.git"
+  },
+  "keywords": [
+    "makrdown",
+    "notes",
+    "local"
+  ],
+  "author": "Ryan Haskell-Glatz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryannhg/minimo/issues"
+  },
+  "homepage": "https://github.com/ryannhg/minimo#readme",
+  "devDependencies": {
+    "serve": "^10.0.1"
+  }
+}
