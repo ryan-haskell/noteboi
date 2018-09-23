@@ -96,7 +96,7 @@ p:not(:first-child) {
 }
 
 .container {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   margin: 0 auto;
   box-sizing: border-box;
   width: 100%;

@@ -4,7 +4,8 @@
   "description": "a free, minimal markdown notes app.",
   "main": "index.js",
   "scripts": {
-    "start": "serve public"
+    "start": "serve public",
+    "sw": "workbox generateSW workbox-config.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/ryannhg/noteboi#readme",
   "devDependencies": {
-    "serve": "^10.0.1"
+    "serve": "^10.0.1",
+    "workbox-cli": "^3.6.1"
   }
 }

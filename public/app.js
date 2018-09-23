@@ -25,8 +25,6 @@ const setClass = p => [
 const setClasses = el => [ ...el.children ].map(setClass)
 const elements = {
   title: document.getElementById('title'),
-  caption: document.getElementById('caption'),
-  date: document.getElementById('date'),
   editor: document.getElementById('editor')
 }
 
@@ -40,19 +38,23 @@ const onUpdate = el => {
   syncWithLocalStorage(el)
 }
 
-const initializeEditor = (el) => {
-  el.setAttribute('contenteditable', 'true')
-  el.innerHTML += window.localStorage.getItem('notes') || '<p><br/></p>'
+const initializeEditor = () => {
+  elements.editor.setAttribute('contenteditable', 'true')
+  elements.editor.innerHTML += window.localStorage.getItem('notes') || '<p><br/></p>'
   elements.title.value = window.localStorage.getItem('title') || ''
-  document.addEventListener('keyup', e => e.target === el && onUpdate(el))
-  onUpdate(el)
+  document.addEventListener('keyup', e =>
+    (e.target === elements.editor || e.target === elements.title) && onUpdate(elements.editor)
+  )
+  onUpdate(elements.editor)
 }
 
 const initializeServiceWorker = () => {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
   }
 }
 
-initializeEditor(elements.editor)
+initializeEditor()
 initializeServiceWorker()
