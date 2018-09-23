@@ -1,7 +1,7 @@
 {
   "name": "minimo",
   "version": "1.0.0",
-  "description": "a free, minimal markdown notes app",
+  "description": "a free, minimal markdown notes app.",
   "main": "index.js",
   "scripts": {
     "start": "serve public"
