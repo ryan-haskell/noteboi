@@ -1,4 +1,4 @@
-# minimo
+# noteboi
 > a free, minimal markdown notes app.
 
 ### Features

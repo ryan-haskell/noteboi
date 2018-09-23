@@ -1,5 +1,5 @@
 {
-  "name": "minimo",
+  "name": "noteboi",
   "version": "1.0.0",
   "description": "a free, minimal markdown notes app.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryannhg/minimo.git"
+    "url": "git+https://github.com/ryannhg/noteboi.git"
   },
   "keywords": [
     "makrdown",
@@ -18,9 +18,9 @@
   "author": "Ryan Haskell-Glatz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryannhg/minimo/issues"
+    "url": "https://github.com/ryannhg/noteboi/issues"
   },
-  "homepage": "https://github.com/ryannhg/minimo#readme",
+  "homepage": "https://github.com/ryannhg/noteboi#readme",
   "devDependencies": {
     "serve": "^10.0.1"
   }
