@@ -5,10 +5,11 @@
 
 - [x] Saves notes locally.
 - [x] Take notes offline.
-- [] Test all the browsers.
-- [] Take multiple notes.
-- [] Sync with a cloud something.
-- [] Electron app?
+- [ ] Full markdown support
+- [ ] Test all the browsers.
+- [ ] Take multiple notes.
+- [ ] Sync with a cloud something.
+- [ ] Electron app?
 
 ### Try it locally
 
