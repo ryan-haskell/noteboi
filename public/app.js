@@ -18,19 +18,18 @@ const setClass = p => [
   [ 'h4', startsWith('#### ') ],
   [ 'h5', startsWith('##### ') ],
   [ 'h6', startsWith('###### ') ],
+  [ 'pre', startsWith('```') ],
   [ 'blockquote', startsWith('> ') ],
   [ 'hr', matches('---') ]
 ].map(patternStyle(p))
 
 const setClasses = el => [ ...el.children ].map(setClass)
 const elements = {
-  title: document.getElementById('title'),
   editor: document.getElementById('editor')
 }
 
 const syncWithLocalStorage = el => {
   window.localStorage.setItem('notes', el.innerHTML)
-  window.localStorage.setItem('title', elements.title.value)
 }
 
 const onUpdate = el => {
@@ -41,9 +40,8 @@ const onUpdate = el => {
 const initializeEditor = () => {
   elements.editor.setAttribute('contenteditable', 'true')
   elements.editor.innerHTML += window.localStorage.getItem('notes') || '<p><br/></p>'
-  elements.title.value = window.localStorage.getItem('title') || ''
   document.addEventListener('keyup', e =>
-    (e.target === elements.editor || e.target === elements.title) && onUpdate(elements.editor)
+    e.target === elements.editor && onUpdate(elements.editor)
   )
   onUpdate(elements.editor)
 }
@@ -56,5 +54,19 @@ const initializeServiceWorker = () => {
   }
 }
 
-initializeEditor()
-initializeServiceWorker()
+const disableTabbing = e => {
+  if (e.code === 'Tab') {
+    e.preventDefault()
+  }
+}
+
+const focusEditor = _ => elements.editor.focus()
+
+const start = _ => {
+  initializeEditor()
+  initializeServiceWorker()
+  document.addEventListener('keydown', disableTabbing)
+  setTimeout(focusEditor, 200)
+}
+
+start()

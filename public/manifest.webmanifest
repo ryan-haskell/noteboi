@@ -6,7 +6,7 @@
   "background_color": "#fff",
   "lang": "en-US",
   "theme_color": "#fff",
-  "description": "a free, minial markdown editor.",
+  "description": "a free, minimal markdown editor.",
   "orientation": "portrait-primary",
   "icons": [{
     "src": "icons/64.png",
