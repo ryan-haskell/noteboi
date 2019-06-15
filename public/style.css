@@ -66,6 +66,10 @@ p, div {
 
 .pre {
   font-family: monospace;
+  background: #333;
+  color: white;
+  padding: 0.5em;
+  border-radius: 2px;
 }
 
 .hr.hr {
