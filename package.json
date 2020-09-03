@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ryannhg/noteboi#readme",
   "devDependencies": {
-    "serve": "^10.0.1",
+    "serve": "^10.1.2",
     "workbox-cli": "^3.6.1"
   }
 }
